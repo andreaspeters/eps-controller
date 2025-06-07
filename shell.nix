@@ -14,8 +14,8 @@ buildInputs = [
 SOURCE_DATE_EPOCH = 315532800;
 PROJDIR = "/tmp/python-dev";
 USER = builtins.getEnv "USER";
+S_DEVICE="/dev/ttyUSB2";
 S_NETWORK="host";
-S_VOLUME_RO="/home/andreas/.pypirc";
 
 shellHook = ''
     echo "Using ${python311.name}"
