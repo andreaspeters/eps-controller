@@ -11,6 +11,7 @@ import regex as re
 #listen to local port for rotctld commands
 listen_ip = '0.0.0.0'  #listen on localhost
 listen_port = 4533     #pass this from command line in future?
+serial_port = '/dev/ttyUSB2'
 
 def handle_connection(conn):
 	while True:
@@ -80,7 +81,7 @@ def start_server():
 # Main
 if __name__ == "__main__":
 	antenna = serial.Serial(
-		port='/dev/ttyUSB2',
+		port=serial_port,
 		baudrate=1200,
 		bytesize=serial.EIGHTBITS,
 		parity=serial.PARITY_NONE,
